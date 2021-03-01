@@ -1,0 +1,23 @@
+{
+  "gestionStockJhipsterApp": {
+    "adminPrivilegeProfil": {
+      "home": {
+        "title": "AdminPrivilegeProfils",
+        "createLabel": "Créer un nouveau Admin Privilege Profil",
+        "createOrEditLabel": "Créer ou éditer un Admin Privilege Profil",
+        "notFound": "Aucun Admin Privilege Profil trouvé"
+      },
+      "created": "Un nouveau Admin Privilege Profil a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Admin Privilege Profil avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Admin Privilege Profil avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Admin Privilege Profil {{ id }} ?"
+      },
+      "detail": {
+        "title": "Admin Privilege Profil"
+      },
+      "profil": "Profil",
+      "privilege": "Privilege"
+    }
+  }
+}

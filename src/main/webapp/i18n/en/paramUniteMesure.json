@@ -1,0 +1,23 @@
+{
+  "gestionStockJhipsterApp": {
+    "paramUniteMesure": {
+      "home": {
+        "title": "Param Unite Mesures",
+        "createLabel": "Create a new Param Unite Mesure",
+        "createOrEditLabel": "Create or edit a Param Unite Mesure",
+        "notFound": "No Param Unite Mesures found"
+      },
+      "created": "A new Param Unite Mesure is created with identifier {{ param }}",
+      "updated": "A Param Unite Mesure is updated with identifier {{ param }}",
+      "deleted": "A Param Unite Mesure is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Param Unite Mesure {{ id }}?"
+      },
+      "detail": {
+        "title": "Param Unite Mesure"
+      },
+      "code": "Code",
+      "libelle": "Libelle"
+    }
+  }
+}

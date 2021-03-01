@@ -1,0 +1,104 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-param-fournisseur-heading" jhiTranslate="gestionStockJhipsterApp.paramFournisseur.home.createOrEditLabel">Create or edit a Param Fournisseur</h2>
+
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+
+                <div class="form-group" [hidden]="!editForm.get('id')!.value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gestionStockJhipsterApp.paramFournisseur.code" for="field_code">Code</label>
+                    <input type="text" class="form-control" name="code" id="field_code"
+                           formControlName="code"/>
+                    <div *ngIf="editForm.get('code')!.invalid && (editForm.get('code')!.dirty || editForm.get('code')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('code')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gestionStockJhipsterApp.paramFournisseur.numeroRegistreCommerce" for="field_numeroRegistreCommerce">Numero Registre Commerce</label>
+                    <input type="text" class="form-control" name="numeroRegistreCommerce" id="field_numeroRegistreCommerce"
+                           formControlName="numeroRegistreCommerce"/>
+                    <div *ngIf="editForm.get('numeroRegistreCommerce')!.invalid && (editForm.get('numeroRegistreCommerce')!.dirty || editForm.get('numeroRegistreCommerce')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('numeroRegistreCommerce')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gestionStockJhipsterApp.paramFournisseur.nif" for="field_nif">Nif</label>
+                    <input type="text" class="form-control" name="nif" id="field_nif"
+                           formControlName="nif"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gestionStockJhipsterApp.paramFournisseur.nis" for="field_nis">Nis</label>
+                    <input type="text" class="form-control" name="nis" id="field_nis"
+                           formControlName="nis"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gestionStockJhipsterApp.paramFournisseur.numArtImposition" for="field_numArtImposition">Num Art Imposition</label>
+                    <input type="text" class="form-control" name="numArtImposition" id="field_numArtImposition"
+                           formControlName="numArtImposition"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gestionStockJhipsterApp.paramFournisseur.raisonSociale" for="field_raisonSociale">Raison Sociale</label>
+                    <input type="text" class="form-control" name="raisonSociale" id="field_raisonSociale"
+                           formControlName="raisonSociale"/>
+                    <div *ngIf="editForm.get('raisonSociale')!.invalid && (editForm.get('raisonSociale')!.dirty || editForm.get('raisonSociale')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('raisonSociale')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gestionStockJhipsterApp.paramFournisseur.telephone" for="field_telephone">Telephone</label>
+                    <input type="text" class="form-control" name="telephone" id="field_telephone"
+                           formControlName="telephone"/>
+                    <div *ngIf="editForm.get('telephone')!.invalid && (editForm.get('telephone')!.dirty || editForm.get('telephone')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('telephone')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gestionStockJhipsterApp.paramFournisseur.fax" for="field_fax">Fax</label>
+                    <input type="text" class="form-control" name="fax" id="field_fax"
+                           formControlName="fax"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gestionStockJhipsterApp.paramFournisseur.email" for="field_email">Email</label>
+                    <input type="text" class="form-control" name="email" id="field_email"
+                           formControlName="email"/>
+                </div>
+            </div>
+
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+                    <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

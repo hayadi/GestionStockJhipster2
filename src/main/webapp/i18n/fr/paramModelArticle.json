@@ -1,0 +1,25 @@
+{
+  "gestionStockJhipsterApp": {
+    "paramModelArticle": {
+      "home": {
+        "title": "ParamModelArticles",
+        "createLabel": "Créer un nouveau Param Model Article",
+        "createOrEditLabel": "Créer ou éditer un Param Model Article",
+        "notFound": "Aucun Param Model Article trouvé"
+      },
+      "created": "Un nouveau Param Model Article a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Param Model Article avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Param Model Article avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Param Model Article {{ id }} ?"
+      },
+      "detail": {
+        "title": "Param Model Article"
+      },
+      "code": "Code",
+      "libelle": "Libelle",
+      "urlImage": "Url Image",
+      "article": "Article"
+    }
+  }
+}

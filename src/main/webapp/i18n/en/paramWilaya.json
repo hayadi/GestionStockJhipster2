@@ -1,0 +1,23 @@
+{
+  "gestionStockJhipsterApp": {
+    "paramWilaya": {
+      "home": {
+        "title": "Param Wilayas",
+        "createLabel": "Create a new Param Wilaya",
+        "createOrEditLabel": "Create or edit a Param Wilaya",
+        "notFound": "No Param Wilayas found"
+      },
+      "created": "A new Param Wilaya is created with identifier {{ param }}",
+      "updated": "A Param Wilaya is updated with identifier {{ param }}",
+      "deleted": "A Param Wilaya is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Param Wilaya {{ id }}?"
+      },
+      "detail": {
+        "title": "Param Wilaya"
+      },
+      "code": "Code",
+      "libelle": "Libelle"
+    }
+  }
+}

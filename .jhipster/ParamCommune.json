@@ -1,0 +1,40 @@
+{
+  "name": "ParamCommune",
+  "fields": [
+    {
+      "fieldName": "code",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "libelle",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "paramWilaya",
+      "otherEntityRelationshipName": "paramCommune",
+      "relationshipValidateRules": "required",
+      "relationshipName": "wilaya",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210301080231",
+  "entityTableName": "param_commune",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

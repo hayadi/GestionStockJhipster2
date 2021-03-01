@@ -1,0 +1,72 @@
+{
+  "name": "ParamArticle",
+  "fields": [
+    {
+      "fieldName": "code",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "libelle",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "consommable",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "quantiteSeuil",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "garantieSeuil",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "expirationSeuil",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "expirable",
+      "fieldType": "Boolean"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "paramFamilleArticle",
+      "otherEntityRelationshipName": "paramArticle",
+      "relationshipValidateRules": "required",
+      "relationshipName": "famille",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "paramUniteMesure",
+      "otherEntityRelationshipName": "paramArticle",
+      "relationshipValidateRules": "required",
+      "relationshipName": "unite",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210301080431",
+  "entityTableName": "param_article",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+    <!--
+        Added the constraints for entity AdminPrivilegeProfil.
+    -->
+    <changeSet id="20210301081131-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="profil_id"
+                                 baseTableName="admin_privilege_profil"
+                                 constraintName="fk_admin_privilege_profil_profil_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="admin_profil"/>
+
+        <addForeignKeyConstraint baseColumnNames="privilege_id"
+                                 baseTableName="admin_privilege_profil"
+                                 constraintName="fk_admin_privilege_profil_privilege_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="admin_privilege"/>
+
+    </changeSet>
+</databaseChangeLog>

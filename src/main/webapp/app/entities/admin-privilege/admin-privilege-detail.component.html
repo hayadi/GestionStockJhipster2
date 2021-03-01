@@ -1,0 +1,38 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="adminPrivilege">
+            <h2><span jhiTranslate="gestionStockJhipsterApp.adminPrivilege.detail.title">Admin Privilege</span> {{ adminPrivilege.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="gestionStockJhipsterApp.adminPrivilege.code">Code</span></dt>
+                <dd>
+                    <span>{{ adminPrivilege.code }}</span>
+                </dd>
+                <dt><span jhiTranslate="gestionStockJhipsterApp.adminPrivilege.libelle">Libelle</span></dt>
+                <dd>
+                    <span>{{ adminPrivilege.libelle }}</span>
+                </dd>
+                <dt><span jhiTranslate="gestionStockJhipsterApp.adminPrivilege.description">Description</span></dt>
+                <dd>
+                    <span>{{ adminPrivilege.description }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/admin-privilege', adminPrivilege.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

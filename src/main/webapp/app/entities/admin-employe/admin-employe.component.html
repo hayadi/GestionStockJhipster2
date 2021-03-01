@@ -1,0 +1,87 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="gestionStockJhipsterApp.adminEmploye.home.title">Admin Employes</span>
+
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-admin-employe" [routerLink]="['/admin-employe/new']">
+            <fa-icon icon="plus"></fa-icon>
+            <span  jhiTranslate="gestionStockJhipsterApp.adminEmploye.home.createLabel">
+            Create a new Admin Employe
+            </span>
+        </button>
+    </h2>
+
+    <jhi-alert-error></jhi-alert-error>
+
+    <jhi-alert></jhi-alert>
+
+    <div class="alert alert-warning" id="no-result" *ngIf="adminEmployes?.length === 0">
+        <span jhiTranslate="gestionStockJhipsterApp.adminEmploye.home.notFound">No adminEmployes found</span>
+    </div>
+
+    <div class="table-responsive" id="entities" *ngIf="adminEmployes && adminEmployes.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+                <tr>
+                    <th scope="col" ><span jhiTranslate="global.field.id">ID</span></th>
+                    <th scope="col" ><span jhiTranslate="gestionStockJhipsterApp.adminEmploye.code">Code</span></th>
+                    <th scope="col" ><span jhiTranslate="gestionStockJhipsterApp.adminEmploye.login">Login</span></th>
+                    <th scope="col" ><span jhiTranslate="gestionStockJhipsterApp.adminEmploye.nom">Nom</span></th>
+                    <th scope="col" ><span jhiTranslate="gestionStockJhipsterApp.adminEmploye.prenom">Prenom</span></th>
+                    <th scope="col" ><span jhiTranslate="gestionStockJhipsterApp.adminEmploye.email">Email</span></th>
+                    <th scope="col" ><span jhiTranslate="gestionStockJhipsterApp.adminEmploye.dateNaissance">Date Naissance</span></th>
+                    <th scope="col" ><span jhiTranslate="gestionStockJhipsterApp.adminEmploye.dateIntegration">Date Integration</span></th>
+                    <th scope="col" ><span jhiTranslate="gestionStockJhipsterApp.adminEmploye.adresse">Adresse</span></th>
+                    <th scope="col" ><span jhiTranslate="gestionStockJhipsterApp.adminEmploye.utilisateur">Utilisateur</span></th>
+                    <th scope="col" ><span jhiTranslate="gestionStockJhipsterApp.adminEmploye.password">Password</span></th>
+                    <th scope="col" ><span jhiTranslate="gestionStockJhipsterApp.adminEmploye.dateEntree">Date Entree</span></th>
+                    <th scope="col" ><span jhiTranslate="gestionStockJhipsterApp.adminEmploye.profil">Profil</span></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let adminEmploye of adminEmployes ;trackBy: trackId">
+                    <td><a [routerLink]="['/admin-employe', adminEmploye.id, 'view']">{{ adminEmploye.id }}</a></td>
+                    <td>{{ adminEmploye.code }}</td>
+                    <td>{{ adminEmploye.login }}</td>
+                    <td>{{ adminEmploye.nom }}</td>
+                    <td>{{ adminEmploye.prenom }}</td>
+                    <td>{{ adminEmploye.email }}</td>
+                    <td>{{ adminEmploye.dateNaissance | date:'mediumDate' }}</td>
+                    <td>{{ adminEmploye.dateIntegration | date:'mediumDate' }}</td>
+                    <td>{{ adminEmploye.adresse }}</td>
+                    <td>{{ adminEmploye.utilisateur }}</td>
+                    <td>{{ adminEmploye.password }}</td>
+                    <td>{{ adminEmploye.dateEntree | date:'mediumDate' }}</td>
+                    <td>
+                        <div *ngIf="adminEmploye.profil">
+                            <a [routerLink]="['/admin-profil', adminEmploye.profil?.id, 'view']" >{{ adminEmploye.profil?.id }}</a>
+                        </div>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group">
+                            <button type="submit"
+                                    [routerLink]="['/admin-employe', adminEmploye.id, 'view']"
+                                    class="btn btn-info btn-sm">
+                                <fa-icon icon="eye"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                            </button>
+
+                            <button type="submit"
+                                    [routerLink]="['/admin-employe', adminEmploye.id, 'edit']"
+                                    class="btn btn-primary btn-sm">
+                                <fa-icon icon="pencil-alt"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                            </button>
+
+                            <button type="submit" (click)="delete(adminEmploye)"
+                                    class="btn btn-danger btn-sm">
+                                <fa-icon icon="times"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

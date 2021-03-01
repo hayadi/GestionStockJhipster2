@@ -1,0 +1,70 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="paramClient">
+            <h2><span jhiTranslate="gestionStockJhipsterApp.paramClient.detail.title">Param Client</span> {{ paramClient.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="gestionStockJhipsterApp.paramClient.code">Code</span></dt>
+                <dd>
+                    <span>{{ paramClient.code }}</span>
+                </dd>
+                <dt><span jhiTranslate="gestionStockJhipsterApp.paramClient.nom">Nom</span></dt>
+                <dd>
+                    <span>{{ paramClient.nom }}</span>
+                </dd>
+                <dt><span jhiTranslate="gestionStockJhipsterApp.paramClient.prenom">Prenom</span></dt>
+                <dd>
+                    <span>{{ paramClient.prenom }}</span>
+                </dd>
+                <dt><span jhiTranslate="gestionStockJhipsterApp.paramClient.raisonSociale">Raison Sociale</span></dt>
+                <dd>
+                    <span>{{ paramClient.raisonSociale }}</span>
+                </dd>
+                <dt><span jhiTranslate="gestionStockJhipsterApp.paramClient.numeroRegistreCommerce">Numero Registre Commerce</span></dt>
+                <dd>
+                    <span>{{ paramClient.numeroRegistreCommerce }}</span>
+                </dd>
+                <dt><span jhiTranslate="gestionStockJhipsterApp.paramClient.nif">Nif</span></dt>
+                <dd>
+                    <span>{{ paramClient.nif }}</span>
+                </dd>
+                <dt><span jhiTranslate="gestionStockJhipsterApp.paramClient.nis">Nis</span></dt>
+                <dd>
+                    <span>{{ paramClient.nis }}</span>
+                </dd>
+                <dt><span jhiTranslate="gestionStockJhipsterApp.paramClient.numArtImposition">Num Art Imposition</span></dt>
+                <dd>
+                    <span>{{ paramClient.numArtImposition }}</span>
+                </dd>
+                <dt><span jhiTranslate="gestionStockJhipsterApp.paramClient.telephone">Telephone</span></dt>
+                <dd>
+                    <span>{{ paramClient.telephone }}</span>
+                </dd>
+                <dt><span jhiTranslate="gestionStockJhipsterApp.paramClient.fax">Fax</span></dt>
+                <dd>
+                    <span>{{ paramClient.fax }}</span>
+                </dd>
+                <dt><span jhiTranslate="gestionStockJhipsterApp.paramClient.email">Email</span></dt>
+                <dd>
+                    <span>{{ paramClient.email }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/param-client', paramClient.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

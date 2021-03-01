@@ -14,7 +14,24 @@
     <property name="uuidType" value="uuid" dbms="h2, postgresql"/>
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210301080031_added_entity_ParamUniteMesure.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210301080131_added_entity_ParamWilaya.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210301080231_added_entity_ParamCommune.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210301080331_added_entity_ParamFamilleArticle.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210301080431_added_entity_ParamArticle.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210301080531_added_entity_ParamFournisseur.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210301080631_added_entity_ParamClient.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210301080731_added_entity_ParamModelArticle.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210301080831_added_entity_AdminEmploye.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210301080931_added_entity_AdminPrivilege.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210301081031_added_entity_AdminProfil.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210301081131_added_entity_AdminPrivilegeProfil.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20210301080231_added_entity_constraints_ParamCommune.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210301080431_added_entity_constraints_ParamArticle.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210301080731_added_entity_constraints_ParamModelArticle.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210301080831_added_entity_constraints_AdminEmploye.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20210301081131_added_entity_constraints_AdminPrivilegeProfil.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
     <!-- jhipster-needle-liquibase-add-incremental-changelog - JHipster will add incremental liquibase changelogs here -->
 </databaseChangeLog>

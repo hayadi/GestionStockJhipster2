@@ -1,0 +1,62 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="paramFournisseur">
+            <h2><span jhiTranslate="gestionStockJhipsterApp.paramFournisseur.detail.title">Param Fournisseur</span> {{ paramFournisseur.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="gestionStockJhipsterApp.paramFournisseur.code">Code</span></dt>
+                <dd>
+                    <span>{{ paramFournisseur.code }}</span>
+                </dd>
+                <dt><span jhiTranslate="gestionStockJhipsterApp.paramFournisseur.numeroRegistreCommerce">Numero Registre Commerce</span></dt>
+                <dd>
+                    <span>{{ paramFournisseur.numeroRegistreCommerce }}</span>
+                </dd>
+                <dt><span jhiTranslate="gestionStockJhipsterApp.paramFournisseur.nif">Nif</span></dt>
+                <dd>
+                    <span>{{ paramFournisseur.nif }}</span>
+                </dd>
+                <dt><span jhiTranslate="gestionStockJhipsterApp.paramFournisseur.nis">Nis</span></dt>
+                <dd>
+                    <span>{{ paramFournisseur.nis }}</span>
+                </dd>
+                <dt><span jhiTranslate="gestionStockJhipsterApp.paramFournisseur.numArtImposition">Num Art Imposition</span></dt>
+                <dd>
+                    <span>{{ paramFournisseur.numArtImposition }}</span>
+                </dd>
+                <dt><span jhiTranslate="gestionStockJhipsterApp.paramFournisseur.raisonSociale">Raison Sociale</span></dt>
+                <dd>
+                    <span>{{ paramFournisseur.raisonSociale }}</span>
+                </dd>
+                <dt><span jhiTranslate="gestionStockJhipsterApp.paramFournisseur.telephone">Telephone</span></dt>
+                <dd>
+                    <span>{{ paramFournisseur.telephone }}</span>
+                </dd>
+                <dt><span jhiTranslate="gestionStockJhipsterApp.paramFournisseur.fax">Fax</span></dt>
+                <dd>
+                    <span>{{ paramFournisseur.fax }}</span>
+                </dd>
+                <dt><span jhiTranslate="gestionStockJhipsterApp.paramFournisseur.email">Email</span></dt>
+                <dd>
+                    <span>{{ paramFournisseur.email }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/param-fournisseur', paramFournisseur.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

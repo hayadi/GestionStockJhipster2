@@ -1,0 +1,77 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="gestionStockJhipsterApp.paramFournisseur.home.title">Param Fournisseurs</span>
+
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-param-fournisseur" [routerLink]="['/param-fournisseur/new']">
+            <fa-icon icon="plus"></fa-icon>
+            <span  jhiTranslate="gestionStockJhipsterApp.paramFournisseur.home.createLabel">
+            Create a new Param Fournisseur
+            </span>
+        </button>
+    </h2>
+
+    <jhi-alert-error></jhi-alert-error>
+
+    <jhi-alert></jhi-alert>
+
+    <div class="alert alert-warning" id="no-result" *ngIf="paramFournisseurs?.length === 0">
+        <span jhiTranslate="gestionStockJhipsterApp.paramFournisseur.home.notFound">No paramFournisseurs found</span>
+    </div>
+
+    <div class="table-responsive" id="entities" *ngIf="paramFournisseurs && paramFournisseurs.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+                <tr>
+                    <th scope="col" ><span jhiTranslate="global.field.id">ID</span></th>
+                    <th scope="col" ><span jhiTranslate="gestionStockJhipsterApp.paramFournisseur.code">Code</span></th>
+                    <th scope="col" ><span jhiTranslate="gestionStockJhipsterApp.paramFournisseur.numeroRegistreCommerce">Numero Registre Commerce</span></th>
+                    <th scope="col" ><span jhiTranslate="gestionStockJhipsterApp.paramFournisseur.nif">Nif</span></th>
+                    <th scope="col" ><span jhiTranslate="gestionStockJhipsterApp.paramFournisseur.nis">Nis</span></th>
+                    <th scope="col" ><span jhiTranslate="gestionStockJhipsterApp.paramFournisseur.numArtImposition">Num Art Imposition</span></th>
+                    <th scope="col" ><span jhiTranslate="gestionStockJhipsterApp.paramFournisseur.raisonSociale">Raison Sociale</span></th>
+                    <th scope="col" ><span jhiTranslate="gestionStockJhipsterApp.paramFournisseur.telephone">Telephone</span></th>
+                    <th scope="col" ><span jhiTranslate="gestionStockJhipsterApp.paramFournisseur.fax">Fax</span></th>
+                    <th scope="col" ><span jhiTranslate="gestionStockJhipsterApp.paramFournisseur.email">Email</span></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let paramFournisseur of paramFournisseurs ;trackBy: trackId">
+                    <td><a [routerLink]="['/param-fournisseur', paramFournisseur.id, 'view']">{{ paramFournisseur.id }}</a></td>
+                    <td>{{ paramFournisseur.code }}</td>
+                    <td>{{ paramFournisseur.numeroRegistreCommerce }}</td>
+                    <td>{{ paramFournisseur.nif }}</td>
+                    <td>{{ paramFournisseur.nis }}</td>
+                    <td>{{ paramFournisseur.numArtImposition }}</td>
+                    <td>{{ paramFournisseur.raisonSociale }}</td>
+                    <td>{{ paramFournisseur.telephone }}</td>
+                    <td>{{ paramFournisseur.fax }}</td>
+                    <td>{{ paramFournisseur.email }}</td>
+                    <td class="text-right">
+                        <div class="btn-group">
+                            <button type="submit"
+                                    [routerLink]="['/param-fournisseur', paramFournisseur.id, 'view']"
+                                    class="btn btn-info btn-sm">
+                                <fa-icon icon="eye"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                            </button>
+
+                            <button type="submit"
+                                    [routerLink]="['/param-fournisseur', paramFournisseur.id, 'edit']"
+                                    class="btn btn-primary btn-sm">
+                                <fa-icon icon="pencil-alt"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                            </button>
+
+                            <button type="submit" (click)="delete(paramFournisseur)"
+                                    class="btn btn-danger btn-sm">
+                                <fa-icon icon="times"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

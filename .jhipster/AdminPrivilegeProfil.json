@@ -1,0 +1,33 @@
+{
+  "name": "AdminPrivilegeProfil",
+  "fields": [],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "adminProfil",
+      "otherEntityRelationshipName": "adminPrivilegeProfil",
+      "relationshipValidateRules": "required",
+      "relationshipName": "profil",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "adminPrivilege",
+      "otherEntityRelationshipName": "adminPrivilegeProfil",
+      "relationshipValidateRules": "required",
+      "relationshipName": "privilege",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210301081131",
+  "entityTableName": "admin_privilege_profil",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

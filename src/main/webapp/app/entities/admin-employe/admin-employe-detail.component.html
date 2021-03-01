@@ -1,0 +1,76 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="adminEmploye">
+            <h2><span jhiTranslate="gestionStockJhipsterApp.adminEmploye.detail.title">Admin Employe</span> {{ adminEmploye.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="gestionStockJhipsterApp.adminEmploye.code">Code</span></dt>
+                <dd>
+                    <span>{{ adminEmploye.code }}</span>
+                </dd>
+                <dt><span jhiTranslate="gestionStockJhipsterApp.adminEmploye.login">Login</span></dt>
+                <dd>
+                    <span>{{ adminEmploye.login }}</span>
+                </dd>
+                <dt><span jhiTranslate="gestionStockJhipsterApp.adminEmploye.nom">Nom</span></dt>
+                <dd>
+                    <span>{{ adminEmploye.nom }}</span>
+                </dd>
+                <dt><span jhiTranslate="gestionStockJhipsterApp.adminEmploye.prenom">Prenom</span></dt>
+                <dd>
+                    <span>{{ adminEmploye.prenom }}</span>
+                </dd>
+                <dt><span jhiTranslate="gestionStockJhipsterApp.adminEmploye.email">Email</span></dt>
+                <dd>
+                    <span>{{ adminEmploye.email }}</span>
+                </dd>
+                <dt><span jhiTranslate="gestionStockJhipsterApp.adminEmploye.dateNaissance">Date Naissance</span></dt>
+                <dd>
+                    <span>{{ adminEmploye.dateNaissance }}</span>
+                </dd>
+                <dt><span jhiTranslate="gestionStockJhipsterApp.adminEmploye.dateIntegration">Date Integration</span></dt>
+                <dd>
+                    <span>{{ adminEmploye.dateIntegration }}</span>
+                </dd>
+                <dt><span jhiTranslate="gestionStockJhipsterApp.adminEmploye.adresse">Adresse</span></dt>
+                <dd>
+                    <span>{{ adminEmploye.adresse }}</span>
+                </dd>
+                <dt><span jhiTranslate="gestionStockJhipsterApp.adminEmploye.utilisateur">Utilisateur</span></dt>
+                <dd>
+                    <span>{{ adminEmploye.utilisateur }}</span>
+                </dd>
+                <dt><span jhiTranslate="gestionStockJhipsterApp.adminEmploye.password">Password</span></dt>
+                <dd>
+                    <span>{{ adminEmploye.password }}</span>
+                </dd>
+                <dt><span jhiTranslate="gestionStockJhipsterApp.adminEmploye.dateEntree">Date Entree</span></dt>
+                <dd>
+                    <span>{{ adminEmploye.dateEntree }}</span>
+                </dd>
+                <dt><span jhiTranslate="gestionStockJhipsterApp.adminEmploye.profil">Profil</span></dt>
+                <dd>
+                    <div *ngIf="adminEmploye.profil">
+                        <a [routerLink]="['/admin-profil', adminEmploye.profil?.id, 'view']">{{ adminEmploye.profil?.id }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/admin-employe', adminEmploye.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

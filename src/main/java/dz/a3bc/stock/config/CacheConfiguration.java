@@ -47,6 +47,18 @@ public class CacheConfiguration {
             createCache(cm, dz.a3bc.stock.domain.User.class.getName());
             createCache(cm, dz.a3bc.stock.domain.Authority.class.getName());
             createCache(cm, dz.a3bc.stock.domain.User.class.getName() + ".authorities");
+            createCache(cm, dz.a3bc.stock.domain.ParamUniteMesure.class.getName());
+            createCache(cm, dz.a3bc.stock.domain.ParamWilaya.class.getName());
+            createCache(cm, dz.a3bc.stock.domain.ParamCommune.class.getName());
+            createCache(cm, dz.a3bc.stock.domain.ParamFamilleArticle.class.getName());
+            createCache(cm, dz.a3bc.stock.domain.ParamArticle.class.getName());
+            createCache(cm, dz.a3bc.stock.domain.ParamFournisseur.class.getName());
+            createCache(cm, dz.a3bc.stock.domain.ParamClient.class.getName());
+            createCache(cm, dz.a3bc.stock.domain.ParamModelArticle.class.getName());
+            createCache(cm, dz.a3bc.stock.domain.AdminEmploye.class.getName());
+            createCache(cm, dz.a3bc.stock.domain.AdminPrivilege.class.getName());
+            createCache(cm, dz.a3bc.stock.domain.AdminProfil.class.getName());
+            createCache(cm, dz.a3bc.stock.domain.AdminPrivilegeProfil.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

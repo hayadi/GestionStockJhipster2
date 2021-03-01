@@ -1,0 +1,32 @@
+{
+  "gestionStockJhipsterApp": {
+    "paramClient": {
+      "home": {
+        "title": "ParamClients",
+        "createLabel": "Créer un nouveau Param Client",
+        "createOrEditLabel": "Créer ou éditer un Param Client",
+        "notFound": "Aucun Param Client trouvé"
+      },
+      "created": "Un nouveau Param Client a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Param Client avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Param Client avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Param Client {{ id }} ?"
+      },
+      "detail": {
+        "title": "Param Client"
+      },
+      "code": "Code",
+      "nom": "Nom",
+      "prenom": "Prenom",
+      "raisonSociale": "Raison Sociale",
+      "numeroRegistreCommerce": "Numero Registre Commerce",
+      "nif": "Nif",
+      "nis": "Nis",
+      "numArtImposition": "Num Art Imposition",
+      "telephone": "Telephone",
+      "fax": "Fax",
+      "email": "Email"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "gestionStockJhipsterApp": {
+    "paramFamilleArticle": {
+      "home": {
+        "title": "Param Famille Articles",
+        "createLabel": "Create a new Param Famille Article",
+        "createOrEditLabel": "Create or edit a Param Famille Article",
+        "notFound": "No Param Famille Articles found"
+      },
+      "created": "A new Param Famille Article is created with identifier {{ param }}",
+      "updated": "A Param Famille Article is updated with identifier {{ param }}",
+      "deleted": "A Param Famille Article is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Param Famille Article {{ id }}?"
+      },
+      "detail": {
+        "title": "Param Famille Article"
+      },
+      "code": "Code",
+      "libelle": "Libelle"
+    }
+  }
+}

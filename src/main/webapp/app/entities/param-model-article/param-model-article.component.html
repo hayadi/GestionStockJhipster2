@@ -1,0 +1,71 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="gestionStockJhipsterApp.paramModelArticle.home.title">Param Model Articles</span>
+
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-param-model-article" [routerLink]="['/param-model-article/new']">
+            <fa-icon icon="plus"></fa-icon>
+            <span  jhiTranslate="gestionStockJhipsterApp.paramModelArticle.home.createLabel">
+            Create a new Param Model Article
+            </span>
+        </button>
+    </h2>
+
+    <jhi-alert-error></jhi-alert-error>
+
+    <jhi-alert></jhi-alert>
+
+    <div class="alert alert-warning" id="no-result" *ngIf="paramModelArticles?.length === 0">
+        <span jhiTranslate="gestionStockJhipsterApp.paramModelArticle.home.notFound">No paramModelArticles found</span>
+    </div>
+
+    <div class="table-responsive" id="entities" *ngIf="paramModelArticles && paramModelArticles.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+                <tr>
+                    <th scope="col" ><span jhiTranslate="global.field.id">ID</span></th>
+                    <th scope="col" ><span jhiTranslate="gestionStockJhipsterApp.paramModelArticle.code">Code</span></th>
+                    <th scope="col" ><span jhiTranslate="gestionStockJhipsterApp.paramModelArticle.libelle">Libelle</span></th>
+                    <th scope="col" ><span jhiTranslate="gestionStockJhipsterApp.paramModelArticle.urlImage">Url Image</span></th>
+                    <th scope="col" ><span jhiTranslate="gestionStockJhipsterApp.paramModelArticle.article">Article</span></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let paramModelArticle of paramModelArticles ;trackBy: trackId">
+                    <td><a [routerLink]="['/param-model-article', paramModelArticle.id, 'view']">{{ paramModelArticle.id }}</a></td>
+                    <td>{{ paramModelArticle.code }}</td>
+                    <td>{{ paramModelArticle.libelle }}</td>
+                    <td>{{ paramModelArticle.urlImage }}</td>
+                    <td>
+                        <div *ngIf="paramModelArticle.article">
+                            <a [routerLink]="['/param-article', paramModelArticle.article?.id, 'view']" >{{ paramModelArticle.article?.id }}</a>
+                        </div>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group">
+                            <button type="submit"
+                                    [routerLink]="['/param-model-article', paramModelArticle.id, 'view']"
+                                    class="btn btn-info btn-sm">
+                                <fa-icon icon="eye"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                            </button>
+
+                            <button type="submit"
+                                    [routerLink]="['/param-model-article', paramModelArticle.id, 'edit']"
+                                    class="btn btn-primary btn-sm">
+                                <fa-icon icon="pencil-alt"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                            </button>
+
+                            <button type="submit" (click)="delete(paramModelArticle)"
+                                    class="btn btn-danger btn-sm">
+                                <fa-icon icon="times"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

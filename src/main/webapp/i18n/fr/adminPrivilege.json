@@ -1,0 +1,24 @@
+{
+  "gestionStockJhipsterApp": {
+    "adminPrivilege": {
+      "home": {
+        "title": "AdminPrivileges",
+        "createLabel": "Créer un nouveau Admin Privilege",
+        "createOrEditLabel": "Créer ou éditer un Admin Privilege",
+        "notFound": "Aucun Admin Privilege trouvé"
+      },
+      "created": "Un nouveau Admin Privilege a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Admin Privilege avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Admin Privilege avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Admin Privilege {{ id }} ?"
+      },
+      "detail": {
+        "title": "Admin Privilege"
+      },
+      "code": "Code",
+      "libelle": "Libelle",
+      "description": "Description"
+    }
+  }
+}

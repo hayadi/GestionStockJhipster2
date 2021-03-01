@@ -1,0 +1,33 @@
+{
+  "gestionStockJhipsterApp": {
+    "adminEmploye": {
+      "home": {
+        "title": "Admin Employes",
+        "createLabel": "Create a new Admin Employe",
+        "createOrEditLabel": "Create or edit a Admin Employe",
+        "notFound": "No Admin Employes found"
+      },
+      "created": "A new Admin Employe is created with identifier {{ param }}",
+      "updated": "A Admin Employe is updated with identifier {{ param }}",
+      "deleted": "A Admin Employe is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Admin Employe {{ id }}?"
+      },
+      "detail": {
+        "title": "Admin Employe"
+      },
+      "code": "Code",
+      "login": "Login",
+      "nom": "Nom",
+      "prenom": "Prenom",
+      "email": "Email",
+      "dateNaissance": "Date Naissance",
+      "dateIntegration": "Date Integration",
+      "adresse": "Adresse",
+      "utilisateur": "Utilisateur",
+      "password": "Password",
+      "dateEntree": "Date Entree",
+      "profil": "Profil"
+    }
+  }
+}

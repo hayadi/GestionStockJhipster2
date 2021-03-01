@@ -1,0 +1,70 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="paramArticle">
+            <h2><span jhiTranslate="gestionStockJhipsterApp.paramArticle.detail.title">Param Article</span> {{ paramArticle.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="gestionStockJhipsterApp.paramArticle.code">Code</span></dt>
+                <dd>
+                    <span>{{ paramArticle.code }}</span>
+                </dd>
+                <dt><span jhiTranslate="gestionStockJhipsterApp.paramArticle.libelle">Libelle</span></dt>
+                <dd>
+                    <span>{{ paramArticle.libelle }}</span>
+                </dd>
+                <dt><span jhiTranslate="gestionStockJhipsterApp.paramArticle.description">Description</span></dt>
+                <dd>
+                    <span>{{ paramArticle.description }}</span>
+                </dd>
+                <dt><span jhiTranslate="gestionStockJhipsterApp.paramArticle.consommable">Consommable</span></dt>
+                <dd>
+                    <span>{{ paramArticle.consommable }}</span>
+                </dd>
+                <dt><span jhiTranslate="gestionStockJhipsterApp.paramArticle.quantiteSeuil">Quantite Seuil</span></dt>
+                <dd>
+                    <span>{{ paramArticle.quantiteSeuil }}</span>
+                </dd>
+                <dt><span jhiTranslate="gestionStockJhipsterApp.paramArticle.garantieSeuil">Garantie Seuil</span></dt>
+                <dd>
+                    <span>{{ paramArticle.garantieSeuil }}</span>
+                </dd>
+                <dt><span jhiTranslate="gestionStockJhipsterApp.paramArticle.expirationSeuil">Expiration Seuil</span></dt>
+                <dd>
+                    <span>{{ paramArticle.expirationSeuil }}</span>
+                </dd>
+                <dt><span jhiTranslate="gestionStockJhipsterApp.paramArticle.expirable">Expirable</span></dt>
+                <dd>
+                    <span>{{ paramArticle.expirable }}</span>
+                </dd>
+                <dt><span jhiTranslate="gestionStockJhipsterApp.paramArticle.famille">Famille</span></dt>
+                <dd>
+                    <div *ngIf="paramArticle.famille">
+                        <a [routerLink]="['/param-famille-article', paramArticle.famille?.id, 'view']">{{ paramArticle.famille?.id }}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="gestionStockJhipsterApp.paramArticle.unite">Unite</span></dt>
+                <dd>
+                    <div *ngIf="paramArticle.unite">
+                        <a [routerLink]="['/param-unite-mesure', paramArticle.unite?.id, 'view']">{{ paramArticle.unite?.id }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/param-article', paramArticle.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

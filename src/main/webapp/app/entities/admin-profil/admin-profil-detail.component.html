@@ -1,0 +1,38 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="adminProfil">
+            <h2><span jhiTranslate="gestionStockJhipsterApp.adminProfil.detail.title">Admin Profil</span> {{ adminProfil.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="gestionStockJhipsterApp.adminProfil.code">Code</span></dt>
+                <dd>
+                    <span>{{ adminProfil.code }}</span>
+                </dd>
+                <dt><span jhiTranslate="gestionStockJhipsterApp.adminProfil.libelle">Libelle</span></dt>
+                <dd>
+                    <span>{{ adminProfil.libelle }}</span>
+                </dd>
+                <dt><span jhiTranslate="gestionStockJhipsterApp.adminProfil.description">Description</span></dt>
+                <dd>
+                    <span>{{ adminProfil.description }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/admin-profil', adminProfil.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

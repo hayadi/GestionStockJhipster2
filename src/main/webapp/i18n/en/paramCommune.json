@@ -1,0 +1,24 @@
+{
+  "gestionStockJhipsterApp": {
+    "paramCommune": {
+      "home": {
+        "title": "Param Communes",
+        "createLabel": "Create a new Param Commune",
+        "createOrEditLabel": "Create or edit a Param Commune",
+        "notFound": "No Param Communes found"
+      },
+      "created": "A new Param Commune is created with identifier {{ param }}",
+      "updated": "A Param Commune is updated with identifier {{ param }}",
+      "deleted": "A Param Commune is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Param Commune {{ id }}?"
+      },
+      "detail": {
+        "title": "Param Commune"
+      },
+      "code": "Code",
+      "libelle": "Libelle",
+      "wilaya": "Wilaya"
+    }
+  }
+}

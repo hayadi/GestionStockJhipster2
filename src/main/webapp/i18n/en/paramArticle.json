@@ -1,0 +1,31 @@
+{
+  "gestionStockJhipsterApp": {
+    "paramArticle": {
+      "home": {
+        "title": "Param Articles",
+        "createLabel": "Create a new Param Article",
+        "createOrEditLabel": "Create or edit a Param Article",
+        "notFound": "No Param Articles found"
+      },
+      "created": "A new Param Article is created with identifier {{ param }}",
+      "updated": "A Param Article is updated with identifier {{ param }}",
+      "deleted": "A Param Article is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Param Article {{ id }}?"
+      },
+      "detail": {
+        "title": "Param Article"
+      },
+      "code": "Code",
+      "libelle": "Libelle",
+      "description": "Description",
+      "consommable": "Consommable",
+      "quantiteSeuil": "Quantite Seuil",
+      "garantieSeuil": "Garantie Seuil",
+      "expirationSeuil": "Expiration Seuil",
+      "expirable": "Expirable",
+      "famille": "Famille",
+      "unite": "Unite"
+    }
+  }
+}

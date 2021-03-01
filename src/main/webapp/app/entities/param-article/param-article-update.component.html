@@ -1,0 +1,114 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-param-article-heading" jhiTranslate="gestionStockJhipsterApp.paramArticle.home.createOrEditLabel">Create or edit a Param Article</h2>
+
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+
+                <div class="form-group" [hidden]="!editForm.get('id')!.value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gestionStockJhipsterApp.paramArticle.code" for="field_code">Code</label>
+                    <input type="text" class="form-control" name="code" id="field_code"
+                           formControlName="code"/>
+                    <div *ngIf="editForm.get('code')!.invalid && (editForm.get('code')!.dirty || editForm.get('code')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('code')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gestionStockJhipsterApp.paramArticle.libelle" for="field_libelle">Libelle</label>
+                    <input type="text" class="form-control" name="libelle" id="field_libelle"
+                           formControlName="libelle"/>
+                    <div *ngIf="editForm.get('libelle')!.invalid && (editForm.get('libelle')!.dirty || editForm.get('libelle')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('libelle')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gestionStockJhipsterApp.paramArticle.description" for="field_description">Description</label>
+                    <input type="text" class="form-control" name="description" id="field_description"
+                           formControlName="description"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gestionStockJhipsterApp.paramArticle.consommable" for="field_consommable">Consommable</label>
+                    <input type="checkbox" class="form-control" name="consommable" id="field_consommable"
+                           formControlName="consommable"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gestionStockJhipsterApp.paramArticle.quantiteSeuil" for="field_quantiteSeuil">Quantite Seuil</label>
+                    <input type="number" class="form-control" name="quantiteSeuil" id="field_quantiteSeuil"
+                           formControlName="quantiteSeuil"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gestionStockJhipsterApp.paramArticle.garantieSeuil" for="field_garantieSeuil">Garantie Seuil</label>
+                    <input type="number" class="form-control" name="garantieSeuil" id="field_garantieSeuil"
+                           formControlName="garantieSeuil"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gestionStockJhipsterApp.paramArticle.expirationSeuil" for="field_expirationSeuil">Expiration Seuil</label>
+                    <input type="number" class="form-control" name="expirationSeuil" id="field_expirationSeuil"
+                           formControlName="expirationSeuil"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gestionStockJhipsterApp.paramArticle.expirable" for="field_expirable">Expirable</label>
+                    <input type="checkbox" class="form-control" name="expirable" id="field_expirable"
+                           formControlName="expirable"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gestionStockJhipsterApp.paramArticle.famille" for="field_famille">Famille</label>
+                    <select class="form-control" id="field_famille" name="famille" formControlName="famille">
+                        <option *ngIf="!editForm.get('famille')!.value" [ngValue]="null" selected></option>
+                        <option [ngValue]="paramFamilleArticleOption.id === editForm.get('famille')!.value?.id ? editForm.get('famille')!.value : paramFamilleArticleOption" *ngFor="let paramFamilleArticleOption of paramfamillearticles; trackBy: trackById">{{ paramFamilleArticleOption.id }}</option>
+                    </select>
+                </div>
+                <div *ngIf="editForm.get('famille')!.invalid && (editForm.get('famille')!.dirty || editForm.get('famille')!.touched)">
+                    <small class="form-text text-danger"
+                           *ngIf="editForm.get('famille')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                    </small>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gestionStockJhipsterApp.paramArticle.unite" for="field_unite">Unite</label>
+                    <select class="form-control" id="field_unite" name="unite" formControlName="unite">
+                        <option *ngIf="!editForm.get('unite')!.value" [ngValue]="null" selected></option>
+                        <option [ngValue]="paramUniteMesureOption.id === editForm.get('unite')!.value?.id ? editForm.get('unite')!.value : paramUniteMesureOption" *ngFor="let paramUniteMesureOption of paramunitemesures; trackBy: trackById">{{ paramUniteMesureOption.id }}</option>
+                    </select>
+                </div>
+                <div *ngIf="editForm.get('unite')!.invalid && (editForm.get('unite')!.dirty || editForm.get('unite')!.touched)">
+                    <small class="form-text text-danger"
+                           *ngIf="editForm.get('unite')?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                    </small>
+                </div>
+            </div>
+
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+                    <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

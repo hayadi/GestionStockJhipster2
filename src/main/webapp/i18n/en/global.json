@@ -7,6 +7,18 @@
       "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
       "entities": {
         "main": "Entities",
+        "paramUniteMesure": "Param Unite Mesure",
+        "paramWilaya": "Param Wilaya",
+        "paramCommune": "Param Commune",
+        "paramFamilleArticle": "Param Famille Article",
+        "paramArticle": "Param Article",
+        "paramFournisseur": "Param Fournisseur",
+        "paramClient": "Param Client",
+        "paramModelArticle": "Param Model Article",
+        "adminEmploye": "Admin Employe",
+        "adminPrivilege": "Admin Privilege",
+        "adminProfil": "Admin Profil",
+        "adminPrivilegeProfil": "Admin Privilege Profil",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

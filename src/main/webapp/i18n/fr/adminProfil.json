@@ -1,0 +1,24 @@
+{
+  "gestionStockJhipsterApp": {
+    "adminProfil": {
+      "home": {
+        "title": "AdminProfils",
+        "createLabel": "Créer un nouveau Admin Profil",
+        "createOrEditLabel": "Créer ou éditer un Admin Profil",
+        "notFound": "Aucun Admin Profil trouvé"
+      },
+      "created": "Un nouveau Admin Profil a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Admin Profil avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Admin Profil avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Admin Profil {{ id }} ?"
+      },
+      "detail": {
+        "title": "Admin Profil"
+      },
+      "code": "Code",
+      "libelle": "Libelle",
+      "description": "Description"
+    }
+  }
+}

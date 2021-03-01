@@ -1,0 +1,30 @@
+{
+  "gestionStockJhipsterApp": {
+    "paramFournisseur": {
+      "home": {
+        "title": "Param Fournisseurs",
+        "createLabel": "Create a new Param Fournisseur",
+        "createOrEditLabel": "Create or edit a Param Fournisseur",
+        "notFound": "No Param Fournisseurs found"
+      },
+      "created": "A new Param Fournisseur is created with identifier {{ param }}",
+      "updated": "A Param Fournisseur is updated with identifier {{ param }}",
+      "deleted": "A Param Fournisseur is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Param Fournisseur {{ id }}?"
+      },
+      "detail": {
+        "title": "Param Fournisseur"
+      },
+      "code": "Code",
+      "numeroRegistreCommerce": "Numero Registre Commerce",
+      "nif": "Nif",
+      "nis": "Nis",
+      "numArtImposition": "Num Art Imposition",
+      "raisonSociale": "Raison Sociale",
+      "telephone": "Telephone",
+      "fax": "Fax",
+      "email": "Email"
+    }
+  }
+}
