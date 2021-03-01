@@ -1,0 +1,104 @@
+entity ParamUniteMesure{
+code String required,
+libelle String required
+}
+
+entity ParamWilaya{
+code String required,
+libelle String required
+}
+
+entity ParamCommune{
+code String required,
+libelle String required
+}
+
+entity ParamFamilleArticle{
+code String required,
+libelle String required
+}
+
+entity ParamArticle{
+code String required,
+libelle String required,
+description String,
+consommable Boolean,
+quantiteSeuil BigDecimal,
+garantieSeuil Integer,
+expirationSeuil Integer,
+expirable Boolean,
+
+}
+
+
+entity ParamFournisseur{
+code String required,
+numeroRegistreCommerce String required,
+nif String,
+nis String,
+numArtImposition String,
+raisonSociale String required,
+telephone String required,
+fax String,
+email String
+}
+
+entity ParamClient{
+code String required,
+nom String,
+prenom String,
+raisonSociale String,
+numeroRegistreCommerce String,
+nif String required,
+nis String required,
+numArtImposition String,
+telephone String,
+fax String,
+email String
+}
+
+entity ParamModelArticle{
+code String required,
+libelle String required,
+urlImage String
+}
+
+entity AdminEmploye{
+code String required,
+login String,
+nom String required,
+prenom String required,
+email String,
+dateNaissance LocalDate required,
+dateIntegration LocalDate required,
+adresse String required,
+utilisateur Boolean required,
+password String,
+dateEntree LocalDate
+}
+
+entity AdminPrivilege{
+code String required,
+libelle String required,
+description String
+}
+
+entity AdminProfil{
+code String required,
+libelle String required,
+description String
+}
+
+entity AdminPrivilegeProfil{
+
+}
+relationship ManyToOne {
+	ParamArticle {famille required} to ParamFamilleArticle,
+    ParamArticle {unite required} to ParamUniteMesure,
+	ParamCommune {wilaya required} to ParamWilaya,
+    ParamModelArticle {article required} to ParamArticle,
+    
+    AdminEmploye {profil} to AdminProfil,
+    AdminPrivilegeProfil {profil required} to AdminProfil,
+    AdminPrivilegeProfil {privilege required} to AdminPrivilege
+}
